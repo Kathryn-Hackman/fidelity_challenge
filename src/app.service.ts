@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  encrypt(inputString, shift): string {
+  encrypt(inputString, shift): object {
     shift = parseInt(shift)
     var encryptedString = '';
     while(shift > 26) {
@@ -36,6 +36,6 @@ export class AppService {
         encryptedString += inputString.charAt(i);
       }
     }
-    return encryptedString;
+    return {result:encryptedString};
   }
 }
