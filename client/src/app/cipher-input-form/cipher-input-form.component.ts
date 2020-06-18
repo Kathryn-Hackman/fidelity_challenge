@@ -8,6 +8,7 @@ import { CipherForm } from '../cipher-form';
 })
 export class CipherInputFormComponent implements OnInit {
 
+  model = new CipherForm('Test input string', 0);
   // constructor() { }
   submitted = false;
 
@@ -15,5 +16,6 @@ export class CipherInputFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // TODO: Remove this when we're done
+  get diagnostic() { return JSON.stringify(this.model); }
 }
