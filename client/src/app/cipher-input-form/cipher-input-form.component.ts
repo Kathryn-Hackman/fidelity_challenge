@@ -13,7 +13,10 @@ export class CipherInputFormComponent implements OnInit {
   submitted = false;
 
   onSubmit() { this.submitted = true;
-               console.log('pressed submit');
+               console.log(this.model.inputString);
+               console.log(this.model.shift);
+               const url = 'http://localhost:3000?inputString=' + this.model.inputString + '&shift=' + this.model.shift;
+               console.log(url);
   }
 
   ngOnInit(): void {
