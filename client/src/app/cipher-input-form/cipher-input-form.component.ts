@@ -12,7 +12,9 @@ export class CipherInputFormComponent implements OnInit {
   // constructor() { }
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  onSubmit() { this.submitted = true;
+               console.log('pressed submit');
+  }
 
   ngOnInit(): void {
   }
