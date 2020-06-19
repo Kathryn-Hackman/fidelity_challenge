@@ -4,4 +4,7 @@ export declare class AppController {
     constructor(appService: AppService);
     allEncryptedStringsSoFar: Array<string>;
     encrypt(inputString: any, shift: any): object;
+    all(): {
+        all: string[];
+    };
 }

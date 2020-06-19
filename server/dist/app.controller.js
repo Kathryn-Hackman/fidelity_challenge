@@ -25,6 +25,9 @@ let AppController = class AppController {
         this.allEncryptedStringsSoFar.push(currentEncryptedString);
         return { result: currentEncryptedString, all: this.allEncryptedStringsSoFar };
     }
+    all() {
+        return { all: this.allEncryptedStringsSoFar };
+    }
 };
 __decorate([
     common_1.Get(),
@@ -34,6 +37,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Object)
 ], AppController.prototype, "encrypt", null);
+__decorate([
+    common_1.Get('/all'),
+    common_1.Header('Access-Control-Allow-Origin', '*'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "all", null);
 AppController = __decorate([
     common_1.Controller(),
     __metadata("design:paramtypes", [app_service_1.AppService])

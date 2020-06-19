@@ -13,4 +13,9 @@ export class AppController {
     this.allEncryptedStringsSoFar.push(currentEncryptedString);
     return {result:currentEncryptedString, all:this.allEncryptedStringsSoFar}
   }
+  @Get('/all') 
+  @Header('Access-Control-Allow-Origin', '*')
+  all() {
+    return {all:this.allEncryptedStringsSoFar};
+  }
 }

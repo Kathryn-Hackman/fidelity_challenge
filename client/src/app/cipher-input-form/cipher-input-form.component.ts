@@ -27,5 +27,13 @@ export class CipherInputFormComponent implements OnInit {
                   });
   }
   ngOnInit(): void {
+    const url = 'http://localhost:3000/all';
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'
+    }) };
+    this.http.get(url, httpOptions).subscribe((data: Response) => {
+      this.model.allEncryptedStrings = data.all;
+    });
+
   }
 }
