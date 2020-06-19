@@ -23,3 +23,6 @@ Caesar cipher challenge take home assignment for Fidelity Labs. After the app is
 
 1. cd into server
 2. run jest
+3. cd ..
+4. cd into client
+5. run ng test

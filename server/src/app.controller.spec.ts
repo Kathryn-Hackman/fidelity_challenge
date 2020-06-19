@@ -21,11 +21,11 @@ describe('AppController', () => {
       var testVar = appController.encrypt(inputString,shift);
       expect(testVar['result']).toBe("I love JavaScript!");
     });
-    it('Test 2!', () => {
-      const inputString = 'Test 2!';
-      const shift = 0;
+    it('9)Test,622!', () => {
+      const inputString = '9)Test,622!';
+      const shift = 5;
       var testVar = appController.encrypt(inputString,shift);
-      expect(testVar['result']).toBe("Test 2!");
+      expect(testVar['result']).toBe("9)Yjxy,622!");
     });
     it(' ', () => {
       const inputString = ' ';
@@ -47,9 +47,21 @@ describe('AppController', () => {
     });
     it('JavaScript!', () => {
       const inputString = 'JavaScript!';
-      const shift = 27;
+      const shift = 26;
       var testVar = appController.encrypt(inputString,shift);
       expect(testVar['result']).toBe("JavaScript!");
+    });
+    it('JavaScript!', () => {
+      const inputString = 'JavaScript!';
+      const shift = -26;
+      var testVar = appController.encrypt(inputString,shift);
+      expect(testVar['result']).toBe("JavaScript!");
+    });
+    it('JavaScript!', () => {
+      const inputString = 'JavaScript!';
+      const shift = -53;
+      var testVar = appController.encrypt(inputString,shift);
+      expect(testVar['result']).toBe("IzuzRbqhos!");
     });
   });
 });
