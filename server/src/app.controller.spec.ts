@@ -63,5 +63,11 @@ describe('AppController', () => {
       var testVar = appController.encrypt(inputString,shift);
       expect(testVar['result']).toBe("IzuzRbqhos!");
     });
+    it('I love JavaScript!', () => {
+      const inputString = 'I love JavaScript!';
+      const shift = 100;
+      var testVar = appController.encrypt(inputString,shift);
+      expect(testVar['result']).toBe('E hkra FwrwOynelp!');
+    });
   });
 });
